@@ -11,6 +11,7 @@ import { ConnectComponent } from './components/login/connect.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AddAppartmentComponent } from './components/add-appartment/add-appartment.component';
 import { TranslatePipe } from './pipes/translate.pipe';
+import { ChangeLookDirective } from './directive/change-look.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
     ConnectComponent,
     AddAppartmentComponent,
     TranslatePipe,
+    ChangeLookDirective,
   
   ],
   imports: [
