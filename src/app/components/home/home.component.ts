@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   _searchPriceMax:number;
   firstNameOfAdvertiser:string;
   lastNameOfAdvertiser:string;
+  showSearchButton:boolean=false;
 
   constructor(public appS:AppartmentService, public appS_advertiser:AdvertiserService) { }
   ngOnInit() {
@@ -36,5 +37,8 @@ export class HomeComponent implements OnInit {
 
   getAdvertiserName(id){
     this.appS_advertiser.getById(id).subscribe(a => {this.firstNameOfAdvertiser = a.firstName; this.lastNameOfAdvertiser = a.lastName});   
+  }
+  del(id){
+    alert('delete apartment was not requried');
   }
 }

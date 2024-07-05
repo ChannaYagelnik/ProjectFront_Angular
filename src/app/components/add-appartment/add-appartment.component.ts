@@ -15,7 +15,7 @@ export class AddAppartmentComponent implements OnInit {
   }
   send(){
     this.appS.appartment.idAdvertiser = this.apps_Advertiser.currentAdvertiser.id;
-    this.appS.add(this.appS.appartment).subscribe(h => {this.router.navigate(['/myHome'])});
+    this.appS.add(this.appS.appartment).subscribe(h => {this.router.navigate(['/myHome']); alert('Add Appartment successfully')});
   }
 
 }
