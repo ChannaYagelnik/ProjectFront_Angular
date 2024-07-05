@@ -1,0 +1,71 @@
+<div>
+  <div class="container">
+    <form class=""><br>
+      <h2>Seaches options</h2>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" #personInput placeholder="input first name" name="myPerson_fn" [(ngModel)] = "_searchPerson_fn" >
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" #personInput placeholder="input last name" name="myPerson_ln" [(ngModel)] = "_searchPerson_ln" >
+        </div><br>
+        <div class="col">
+          <button (click)="seachPerson(_searchPerson_fn, _searchPerson_ln)" class="form-control btn-dark">search by name of person</button>
+        </div>
+      </div><br>
+      <div class="row">
+        <div class="col">
+          <input type="number" class="form-control" #minInput placeholder="starting price" name="myMinPrice" [(ngModel)] = "_searchPriceMin">
+        </div><br>
+        <div class="col">
+          <input type="number" class="form-control" #maxInput placeholder="ending price" name="myMaxPrice" [(ngModel)] = "_searchPriceMax">
+        </div><br>
+        <div class="col">
+          <button (click)="searchPrice(_searchPriceMin,_searchPriceMax)" class="form-control btn-dark">search by min-max price</button>
+        </div>
+      </div><br>
+
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" #cityInput placeholder="input city" name="myCity" [(ngModel)] = "_searchCity">
+        </div><br>
+        <div class="col">
+          <button (click)="seachCity(_searchCity)" class="form-control btn-dark">search by city</button>
+        </div>
+      </div><br>
+    </form>
+  </div>
+  <div class="container mt-3">
+    <h2>Appartment List</h2>
+    <p>this is the appartment of all our amazing...</p>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>describation</th>
+          <th>city</th>
+          <th>address</th>
+          <th>additives</th>
+          <th>cost</th>
+          <th>idAdvertiser</th>
+          <th>picture</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let u of appS.arrAppartments" >
+          <td>{{u.name}}</td>
+          <td>{{u.describation}}</td>
+          <td>{{u.city}}</td>
+          <td>{{u.address}}</td>
+          <td>{{u.additives}}</td>
+          <td>{{u.cost}}</td>
+          <!-- <td ()="getAdvertiserName(u.id)">{{firstNameOfAdvertiser}} {{lastNameOfAdvertiser}}</td> -->
+          <td>{{u.idAdvertiser}}</td>
+          <td><img src="../../../assets/pic/{{u.pic}}" width="30%"></td>
+          <!-- <td><button type="button" class="btn btn-dark" (click) ="del(u.tz)">Delete</button></td> -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
