@@ -5,10 +5,10 @@
         <a class="nav-link" routerLink="myHome" >Home page</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="!appS.isConnected"  routerLink="myLogin" >Loggin</a>
+        <a class="nav-link" *ngIf="!appS.isConnected"  routerLink="myLogin" >SingUp</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="!appS.isConnected" routerLink="myConnect" >Connecte</a>
+        <a class="nav-link" *ngIf="!appS.isConnected" routerLink="myConnect" >Login</a>
       </li>
       <li *ngIf="appS.isConnected" class="nav-item">
         <!-- why it doesnt work hidden="" -->

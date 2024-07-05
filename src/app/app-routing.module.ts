@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddAppartmentComponent } from './components/add-appartment/add-appartment.component';
-import { ConnectComponent } from './components/connect/connect.component';
+import { ConnectComponent } from './components/login/connect.component';
 import { HomeComponent } from './components/home/home.component';
-import { LogginComponent } from './components/loggin/loggin.component';
+import { LogginComponent } from './components/signUp/loggin.component';
 
 
 
