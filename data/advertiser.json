@@ -1,0 +1,77 @@
+[
+    {
+        "id": 1,
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "john.doe@example.com",
+        "password": "password123",
+        "phone": "123-456-7890",
+        "atherPhone": "987-654-3210"
+    },
+    {
+        "id": 2,
+        "firstName": "Tamar",
+        "lastName": "Vahab",
+        "email": "Tamar.doe@example.com",
+        "password": "password123",
+        "phone": "123-456-7890",
+        "atherPhone": "987-654-3210"
+    },
+    {
+        "id": 3,
+        "firstName": "Tehila",
+        "lastName": "Azani",
+        "email": "Tehila.doe@example.com",
+        "password": "password123",
+        "phone": "123-456-7890",
+        "atherPhone": "987-654-3210"
+    },
+    {
+        "id": 4,
+        "firstName": "a",
+        "lastName": "b",
+        "email": "c",
+        "password": "12345678",
+        "phone": 504121381
+    },
+    {
+        "id": 5,
+        "firstName": "a",
+        "lastName": "b",
+        "email": "c",
+        "password": "12345678",
+        "phone": 504121381
+    },
+    {
+        "id": 6,
+        "firstName": "a",
+        "lastName": "b",
+        "email": "c",
+        "password": "12345678",
+        "phone": 504121381
+    },
+    {
+        "id": 7,
+        "firstName": "w",
+        "lastName": "z",
+        "email": "Tamar.doe@example.com",
+        "password": "12345678",
+        "phone": 500000000
+    },
+    {
+        "id": 8,
+        "firstName": "w",
+        "lastName": "a",
+        "email": "Tamar.doe@example.com",
+        "password": "12345678",
+        "phone": 222222222
+    },
+    {
+        "id": 9,
+        "firstName": "fgffffffff",
+        "lastName": "dddddddddd",
+        "email": "Tamar.doe@example.com",
+        "password": "12345678",
+        "phone": 345345345
+    }
+]
