@@ -1,0 +1,58 @@
+<div >
+  <br><br>
+  <h2>Add appartment</h2> 
+  <h4>we would liko your appartment to be here...</h4>
+  <form class="form-group" #idfrm="ngForm" (ngSubmit) = "send()">    
+    <div class="mb-3 mt-3">
+      <label for="name" #name class="form-label">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" [(ngModel)] = "appS.appartment.name">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="desc" #desc class="form-label">Describation:</label>
+      <input type="text" class="form-control" required  placeholder="Enter describation" name="desc" #myDesc = "ngModel"[(ngModel)] = "appS.appartment.describation" >
+      <div *ngIf="myDesc.invalid && (myDesc.touched || myDesc.dirty)" class="alert-danger">required</div><br>
+    </div>
+    <div class="mb-3">
+      <label for="pic" class="form-label">Picture:</label>
+      <input type="file" class="form-control" placeholder="Enter picture" #myPic = "ngModel" name="pic" [(ngModel)] = "appS.appartment.pic" required>
+      <div *ngIf="myPic.invalid && (myPic.touched || myPic.dirty)" class="alert-danger">required</div><br>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="city" #city class="form-label">City:</label>
+      <input type="text" class="form-control" #myCity = "ngModel" placeholder="Enter city" name="city" [(ngModel)] = "appS.appartment.city" required>
+      <div *ngIf="myCity.invalid && (myCity.touched || myCity.dirty)" class="alert-danger">required</div><br>
+
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="address" #address class="form-label">Address:</label>
+      <input type="text" class="form-control" #myAddress placeholder="Enter address" name="address" [(ngModel)] = "appS.appartment.address" required>
+      <div *ngIf="myAddress.invalid && (myAddress.touched || myAddress.dirty)" class="alert-danger">required</div><br>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="numOfBads" #numOfBads class="form-label">Num of bads:</label>
+      <input type="number" class="form-control" #myNumOfBads="ngModel" placeholder="Enter num of bads" name="numOfBads" [(ngModel)] = "appS.appartment.numOfBads" required>
+      <div *ngIf="myNumOfBads.invalid && (myNumOfBads.touched || myNumOfBads.dirty)" class="alert-danger">required</div><br>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="additives" #additives class="form-label">Additives:</label>
+      <input type="text" class="form-control" #myAdditives="ngModel" placeholder="Enter additives" name="additives" [(ngModel)] = "appS.appartment.additives" required>
+      <div *ngIf="myAdditives.invalid && (myAdditives.touched || myAdditives.dirty)" class="alert-danger">required</div><br>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="cost" #cost class="form-label">Cost:</label>
+      <input type="number" class="form-control" #myCost placeholder="Enter cost" name="cost" [(ngModel)] = "appS.appartment.cost" required>
+      <div *ngIf="myCost.invalid && (myCost.touched || myCost.dirty)" class="alert-danger">required</div><br>
+    </div>
+    <!-- <div class="mb-3 mt-3">
+      <label for="idAdvertiser" #idAdvertiser class="form-label">Id advertiser:</label>
+      <input type="number" class="form-control" #myidAdvertiser placeholder="Enter id advertiser" name="idAdvertiser" [(ngModel)] = "appS.appartment.idAdvertiser">
+      <div *ngIf="myidAdvertiser.invalid && (myidAdvertiser.touched || myidAdvertiser.dirty)" class="alert-danger">required</div><br>
+    </div> -->
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-dark" value="send">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,70 @@
+<div>
+  <div class="container">
+    <form class=""><br>
+      <h5>Seaches options</h5>
+      <button (click)="showSearchButton=!showSearchButton" class="form-control btn-dark">for search</button><br><br>
+      <div *ngIf="showSearchButton">
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" #personInput placeholder="input first name" name="myPerson_fn"
+              [(ngModel)]="_searchPerson_fn">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" #personInput placeholder="input last name" name="myPerson_ln"
+              [(ngModel)]="_searchPerson_ln">
+          </div><br>
+          <div class="col">
+            <button (click)="seachPerson(_searchPerson_fn, _searchPerson_ln)" class="form-control btn-dark">search by
+              name
+              of person</button>
+          </div>
+        </div><br>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" #minInput placeholder="starting price" name="myMinPrice"
+              [(ngModel)]="_searchPriceMin">
+          </div><br>
+          <div class="col">
+            <input type="number" class="form-control" #maxInput placeholder="ending price" name="myMaxPrice"
+              [(ngModel)]="_searchPriceMax">
+          </div><br>
+          <div class="col">
+            <button (click)="searchPrice(_searchPriceMin,_searchPriceMax)" class="form-control btn-dark">search by
+              min-max
+              price</button>
+          </div>
+        </div><br>
+
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" #cityInput placeholder="input city" name="myCity"
+              [(ngModel)]="_searchCity">
+          </div><br>
+          <div class="col">
+            <button (click)="seachCity(_searchCity)" class="form-control btn-dark">search by city</button>
+          </div>
+        </div><br>
+      </div>
+    </form>
+  </div>
+  <div class="container mt-3">
+    <h2>Appartment List</h2>
+    <p>this is the appartment of all our amazing...</p>
+    <br>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let u of appS.arrAppartments" class="col-md-4 mt-3">
+        <div class="card" style="width:100%">
+          <img class="card-img-top" src="../../../assets/pic/{{u.pic}}" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h4 class="card-title">{{u.city}}, {{u.address}}</h4>
+            <h4>{{u.cost}}$</h4>
+            <button *ngIf="appS_advertiser.isConnected" type="button" class="btn btn-dark" (click)="del(u.tz)">Delete</button>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
